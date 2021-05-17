@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> Family Book</title>
+    </head>
+
+    <body style="text-align: center; background-color: cyan;">
+        <h1 style="font-size: 40px; color: darkred;"> Family Book </h1>
+        <img id="image" src="family.jpg" style="width: 450px; height: 450px;">
+        <br>
+        <h3 id="members"> </h3>
+        <br>
+        <button type="button" onclick="nextslide()"> Next </button>
+
+        <script>
+            var pics =["father.png","mother.jpg","brother.png","sister.png"];
+            var names=["Joji","Annie","Jithin","Neethy"];
+            var i=0;
+
+            function nextslide(){
+                    document.getElementById("image").src=pics[i];
+                    document.getElementById("members").innerHTML=names[i];
+                    i++;
+                    if(i==pics.length){
+                        i=0;
+                    }
+            }
+        </script>
+    </body>
+</html>
